@@ -4,4 +4,4 @@ Documentation       Template robot main suite.
 
 *** Tasks ***
 Minimal task
-    Log    Done.
+    Log To Console    ${CURDIR}${/}Images

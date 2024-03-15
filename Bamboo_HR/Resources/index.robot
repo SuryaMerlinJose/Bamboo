@@ -2,76 +2,89 @@
 Library     SikuliLibrary
 Library     RPA.Desktop
 Library     RPA.Browser.Selenium
-Variables   C:\\Users\\Surya\\Documents\\GitHub\\Bamboo\\Bamboo_HR\\Variables\\image.py
+Variables   ../Variable/image.py
+
 Library     RPA.Excel.Files
 
 
 
 *** Variables ***
 ${URL}    https://quad.bamboohr.com/login.php?r=%2Fhome%2F
-${screenshots}    C:\\Users\\Surya\\Documents\\GitHub\\Bamboo\\Bamboo_HR\\Screenshots
-${xlsx}    C:\\Users\\Surya\\Documents\\GitHub\\Bamboo\\Bamboo_HR\\input\\emp_data.xlsx
+${screenshots}    ${CURDIR}${/}..\\Screenshots
+${xlsx}   ${CURDIR}${/}..\\input\\emp_data.xlsx
+${IMGDIR}    ${CURDIR}${/}..\\Images
+
 *** Keywords ***
 
 open chrome from desktop
-    # Log    ${CURDIR}
-    SikuliLibrary.Double Click    ${chrome_icon}
+    Log To Console    ${CURDIR}${/}..\\Images
+    SikuliLibrary.Double Click    ${IMGDIR}/${chrome_icon}
     Sleep    2
     # SikuliLibrary.Click    ${maximize}
     # Sleep    1
-    SikuliLibrary.Input Text    ${url_bar}    ${URL}
+    Sleep    3   
+    ${is_exist}    SikuliLibrary.Exists    ${IMGDIR}/${maximize}
+    
+    IF     ${is_exist}==True
+        Log    ${is_exist}
+        SikuliLibrary.Double Click    ${top_bar}
+        # RPA.Desktop.Press Keys    Windows    Up 
+    END
+    SikuliLibrary.Input Text    ${IMGDIR}/${url_bar}    ${URL}
     RPA.Desktop.Press Keys    ENTER
 
 Logging into bamboo Bamboo_HR
     Sleep    5
-    SikuliLibrary.Input Text    ${email}    suryamerlinjose@gmail.com
+    SikuliLibrary.Input Text    ${IMGDIR}/${email}    suryamerlinjose@gmail.com
     RPA.Desktop.Press Keys    TAB
-    SikuliLibrary.Input Text    ${password}    Quad@123
+    SikuliLibrary.Input Text    ${IMGDIR}/${password}    Quad@123
     RPA.Desktop.Press Keys    ENTER
 
 Add new employee
     [Arguments]    ${emp}
     Sleep    5
-    SikuliLibrary.Click    ${people_button}
+    SikuliLibrary.Click    ${IMGDIR}/${people_button}
     Sleep    5
-    SikuliLibrary.Click    ${add_new_employee}
+    SikuliLibrary.Click    ${IMGDIR}/${add_new_employee}
     Sleep    3
-    SikuliLibrary.Click    ${emp_id}
-    SikuliLibrary.Input Text    ${emp_id}    ${emp}[employee_id]   
+    SikuliLibrary.Click    ${IMGDIR}/${emp_id}
+    SikuliLibrary.Input Text    ${IMGDIR}/${emp_id}    ${emp}[employee_id]   
     RPA.Desktop.Press Keys    TAB
-    SikuliLibrary.Input Text    ${first_name}    ${emp}[first_name]
+    SikuliLibrary.Input Text    ${IMGDIR}/${first_name}    ${emp}[first_name]
     RPA.Desktop.Press Keys    TAB
-    SikuliLibrary.Input Text    ${last_name}    ${emp}[last_name]
+    SikuliLibrary.Input Text    ${IMGDIR}/${last_name}    ${emp}[last_name]
     RPA.Desktop.Press Keys    TAB
     SikuliLibrary.Wheel Down    4
-    SikuliLibrary.Click    ${dob}
-    SikuliLibrary.Input Text    ${dob}    19/08/1999
+    SikuliLibrary.Click    ${IMGDIR}/${dob}
+    SikuliLibrary.Input Text    ${IMGDIR}/${dob}    19/08/1999
     RPA.Desktop.Press Keys    TAB
-    SikuliLibrary.Input Text    ${gender}    ${emp}[gender]
+    SikuliLibrary.Input Text    ${IMGDIR}/${gender}    ${emp}[gender]
     RPA.Desktop.Press Keys    ENTER
     RPA.Desktop.Press Keys    TAB
-    SikuliLibrary.Input Text    ${martial_status}    ${emp}[marital_status]
+    SikuliLibrary.Input Text    ${IMGDIR}/${martial_status}    ${emp}[marital_status]
     RPA.Desktop.Press Keys    ENTER
     SikuliLibrary.Wheel Down    7
-    SikuliLibrary.Click    ${city}
-    SikuliLibrary.Input Text    ${city}    ${emp}[city]
+    SikuliLibrary.Click    ${IMGDIR}/${city}
+    SikuliLibrary.Input Text    ${IMGDIR}/${city}    ${emp}[city]
     RPA.Desktop.Press Keys    TAB
-    SikuliLibrary.Click    ${state}
-    SikuliLibrary.Input Text    ${state_search}   ${emp}[state] 
+    SikuliLibrary.Click    ${IMGDIR}/${state}
+    SikuliLibrary.Input Text    ${IMGDIR}/${state_search}   ${emp}[state] 
     RPA.Desktop.Press Keys    ENTER
     RPA.Desktop.Press Keys    TAB
-    SikuliLibrary.Input Text    ${zip}    ${emp}[zip]
+    SikuliLibrary.Input Text    ${IMGDIR}/${zip}    ${emp}[zip]
     RPA.Desktop.Press Keys    TAB
-    SikuliLibrary.Click     ${country}    
-    SikuliLibrary.Input Text    ${country_search}    ${emp}[country]
+    SikuliLibrary.Click     ${IMGDIR}/${country}    
+    SikuliLibrary.Input Text    ${IMGDIR}/${country_search}    ${emp}[country]
     RPA.Desktop.Press Keys    ENTER
-    SikuliLibrary.Click    ${save}
+    SikuliLibrary.Click    ${IMGDIR}/${save}
     Sleep    8
-    SikuliLibrary.Click    ${screen_space}
+    SikuliLibrary.Click    ${IMGDIR}/${screen_space}
     # ${path}    ${screenshots}/${emp}[employee_id].png
-    SikuliLibrary.Add Image Path    ${screenshots}/${emp}[employee_id].png
+    # SikuliLibrary.Add Image Path    ${screenshots}/${emp}[employee_id].png
     # SikuliLibrary.Set Capture Folder    ${screenshots}/${emp}[employee_id].png
-    SikuliLibrary.Capture Screen        
+    ${path}=    SikuliLibrary.Capture Screen   
+    Log    ${path} 
+
     # Capture Page Screenshot    ${screenshots}/${emp}[employee_id].png    #Error: Cannot capture screenshot because no browser is open.
     # Take Screenshot
     
