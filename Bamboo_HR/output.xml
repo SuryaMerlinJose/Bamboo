@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.12 on win32)" generated="20240315 11:58:54.488" rpa="true" schemaversion="4">
+<suite id="s1" name="Index" source="c:\Users\Surya\Documents\GitHub\Bamboo\Bamboo_HR\Resources\index.robot">
+<test id="s1-t1" name="bambo HR" line="97">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240315 11:59:02.056" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240315 11:59:00.047" endtime="20240315 11:59:02.057"/>
+</kw>
+<kw name="open chrome from desktop">
+<kw name="Double Click" library="SikuliLibrary">
+<arg>${chrome_icon}</arg>
+<doc>Double click</doc>
+<msg timestamp="20240315 11:59:03.247" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484142461.png'/&gt;
+[log] DOUBLE CLICK on L[1089,137]@S(0) (632 msec)</msg>
+<status status="PASS" starttime="20240315 11:59:02.059" endtime="20240315 11:59:03.247"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240315 11:59:05.260" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240315 11:59:03.247" endtime="20240315 11:59:05.261"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${url_bar}</arg>
+<arg>${URL}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20240315 11:59:11.032" level="INFO">Input Text:
+https://quad.bamboohr.com/login.php?r=%2Fhome%2F</msg>
+<msg timestamp="20240315 11:59:11.032" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484145570.png'/&gt;
+[log] CLICK on L[200,55]@S(0) (573 msec)
+[log]  TYPE "https://quad.bamboohr.com/login.php?r=%2Fhome%2F"</msg>
+<status status="PASS" starttime="20240315 11:59:05.264" endtime="20240315 11:59:11.032"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>ENTER</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240315 11:59:11.032" level="INFO">Pressing keys: Key.enter</msg>
+<status status="PASS" starttime="20240315 11:59:11.032" endtime="20240315 11:59:11.032"/>
+</kw>
+<status status="PASS" starttime="20240315 11:59:02.058" endtime="20240315 11:59:11.032"/>
+</kw>
+<kw name="Logging into bamboo Bamboo_HR">
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240315 11:59:16.040" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240315 11:59:11.032" endtime="20240315 11:59:16.040"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${email}</arg>
+<arg>suryamerlinjose@gmail.com</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20240315 11:59:19.348" level="INFO">Input Text:
+suryamerlinjose@gmail.com</msg>
+<msg timestamp="20240315 11:59:19.348" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484156283.png'/&gt;
+[log] CLICK on L[559,337]@S(0) (561 msec)
+[log]  TYPE "suryamerlinjose@gmail.com"</msg>
+<status status="PASS" starttime="20240315 11:59:16.040" endtime="20240315 11:59:19.348"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>TAB</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240315 11:59:19.348" level="INFO">Pressing keys: Key.tab</msg>
+<status status="PASS" starttime="20240315 11:59:19.348" endtime="20240315 11:59:19.348"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${password}</arg>
+<arg>Quad@123</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20240315 11:59:21.301" level="INFO">Input Text:
+Quad@123</msg>
+<msg timestamp="20240315 11:59:21.301" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484159832.png'/&gt;
+[log] CLICK on L[550,395]@S(0) (560 msec)
+[log]  TYPE "Quad@123"</msg>
+<status status="PASS" starttime="20240315 11:59:19.348" endtime="20240315 11:59:21.301"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>ENTER</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240315 11:59:21.303" level="INFO">Pressing keys: Key.enter</msg>
+<status status="PASS" starttime="20240315 11:59:21.301" endtime="20240315 11:59:21.303"/>
+</kw>
+<status status="PASS" starttime="20240315 11:59:11.032" endtime="20240315 11:59:21.304"/>
+</kw>
+<kw name="Adding new employee">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${xlsx}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20240315 11:59:21.331" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002159FBD7430&gt;</msg>
+<status status="PASS" starttime="20240315 11:59:21.307" endtime="20240315 11:59:21.331"/>
+</kw>
+<kw name="Read Worksheet As Table" library="RPA.Excel.Files">
+<var>${employee}</var>
+<arg>header=True</arg>
+<doc>Read the contents of a worksheet into a Table container. Allows
+sorting/filtering/manipulating using the ``RPA.Tables`` library.</doc>
+<msg timestamp="20240315 11:59:21.334" level="INFO">Created table: Table(columns=['employee_id', 'first_name', 'last_name', 'dob', 'gender', 'marital_status', 'city', 'state', 'zip', 'country'], rows=1)</msg>
+<msg timestamp="20240315 11:59:21.335" level="INFO">${employee} = Table(columns=['employee_id', 'first_name', 'last_name', 'dob', 'gender', 'marital_status', 'city', 'state', 'zip', 'country'], rows=1)</msg>
+<status status="PASS" starttime="20240315 11:59:21.332" endtime="20240315 11:59:21.335"/>
+</kw>
+<for flavor="IN">
+<var>${emp}</var>
+<value>@{employee}</value>
+<iter>
+<var name="${emp}">{'employee_id': 837888, 'first_name': 'John       ', 'last_name': 'Doe       ', 'dob': datetime.datetime(1990, 5, 15, 0, 0), 'gender': 'M', 'marital_status': 'S', 'city': 'NY', 'state': 'AK', 'zip': 1...</var>
+<kw name="Add new employee">
+<arg>${emp}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240315 11:59:26.354" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240315 11:59:21.339" endtime="20240315 11:59:26.354"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${people_button}</arg>
+<doc>Click</doc>
+<msg timestamp="20240315 11:59:27.249" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484166536.png'/&gt;
+[log] CLICK on L[503,155]@S(0) (576 msec)</msg>
+<status status="PASS" starttime="20240315 11:59:26.355" endtime="20240315 11:59:27.250"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240315 11:59:32.252" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240315 11:59:27.250" endtime="20240315 11:59:32.252"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${add_new_employee}</arg>
+<doc>Click</doc>
+<msg timestamp="20240315 11:59:33.117" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484172417.png'/&gt;
+[log] CLICK on L[115,308]@S(0) (565 msec)</msg>
+<status status="PASS" starttime="20240315 11:59:32.252" endtime="20240315 11:59:33.118"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240315 11:59:36.134" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240315 11:59:33.118" endtime="20240315 11:59:36.134"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${emp_id}</arg>
+<doc>Click</doc>
+<msg timestamp="20240315 11:59:37.016" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484176284.png'/&gt;
+[log] CLICK on L[90,519]@S(0) (575 msec)</msg>
+<status status="PASS" starttime="20240315 11:59:36.135" endtime="20240315 11:59:37.016"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${emp_id}</arg>
+<arg>${emp}[employee_id]</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20240315 11:59:37.915" level="INFO">Input Text:
+837888</msg>
+<msg timestamp="20240315 11:59:37.915" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484177186.png'/&gt;
+[log] CLICK on L[90,519]@S(0) (78 msec)
+[log]  TYPE "837888"</msg>
+<status status="PASS" starttime="20240315 11:59:37.018" endtime="20240315 11:59:37.915"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>TAB</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240315 11:59:37.918" level="INFO">Pressing keys: Key.tab</msg>
+<status status="PASS" starttime="20240315 11:59:37.915" endtime="20240315 11:59:37.919"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${first_name}</arg>
+<arg>${emp}[first_name]</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20240315 11:59:39.968" level="INFO">Input Text:
+John</msg>
+<msg timestamp="20240315 11:59:39.968" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484178150.png'/&gt;
+[log] CLICK on L[99,592]@S(0) (569 msec)
+[log]  TYPE "John       "</msg>
+<status status="PASS" starttime="20240315 11:59:37.919" endtime="20240315 11:59:39.968"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>TAB</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240315 11:59:39.968" level="INFO">Pressing keys: Key.tab</msg>
+<status status="PASS" starttime="20240315 11:59:39.968" endtime="20240315 11:59:39.968"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${last_name}</arg>
+<arg>${emp}[last_name]</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20240315 11:59:42.148" level="INFO">Input Text:
+Doe</msg>
+<msg timestamp="20240315 11:59:42.148" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484180500.png'/&gt;
+[log] CLICK on L[372,588]@S(0) (562 msec)
+[log]  TYPE "Doe       "</msg>
+<status status="PASS" starttime="20240315 11:59:39.968" endtime="20240315 11:59:42.149"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>TAB</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240315 11:59:42.152" level="INFO">Pressing keys: Key.tab</msg>
+<status status="PASS" starttime="20240315 11:59:42.150" endtime="20240315 11:59:42.153"/>
+</kw>
+<kw name="Wheel Down" library="SikuliLibrary">
+<arg>4</arg>
+<doc>Wheel down
+ Move mouse to the target, and wheel down with give steps</doc>
+<status status="PASS" starttime="20240315 11:59:42.154" endtime="20240315 11:59:42.387"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${dob}</arg>
+<doc>Click</doc>
+<msg timestamp="20240315 11:59:43.349" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484182633.png'/&gt;
+[log] CLICK on L[57,267]@S(0) (562 msec)</msg>
+<status status="PASS" starttime="20240315 11:59:42.388" endtime="20240315 11:59:43.349"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${dob}</arg>
+<arg>19/08/1999</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20240315 11:59:44.695" level="INFO">Input Text:
+19/08/1999</msg>
+<msg timestamp="20240315 11:59:44.695" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484183583.png'/&gt;
+[log] CLICK on L[57,267]@S(0) (79 msec)
+[log]  TYPE "19/08/1999"</msg>
+<status status="PASS" starttime="20240315 11:59:43.350" endtime="20240315 11:59:44.695"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>TAB</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240315 11:59:44.695" level="INFO">Pressing keys: Key.tab</msg>
+<status status="PASS" starttime="20240315 11:59:44.695" endtime="20240315 11:59:44.695"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${gender}</arg>
+<arg>${emp}[gender]</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20240315 11:59:46.053" level="INFO">Input Text:
+M</msg>
+<msg timestamp="20240315 11:59:46.053" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484185216.png'/&gt;
+[log] CLICK on L[116,409]@S(0) (561 msec)
+[log]  TYPE "M"</msg>
+<status status="PASS" starttime="20240315 11:59:44.695" endtime="20240315 11:59:46.054"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>ENTER</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240315 11:59:46.056" level="INFO">Pressing keys: Key.enter</msg>
+<status status="PASS" starttime="20240315 11:59:46.055" endtime="20240315 11:59:46.058"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>TAB</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240315 11:59:46.058" level="INFO">Pressing keys: Key.tab</msg>
+<status status="PASS" starttime="20240315 11:59:46.058" endtime="20240315 11:59:46.159"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${martial_status}</arg>
+<arg>${emp}[marital_status]</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20240315 11:59:47.333" level="INFO">Input Text:
+S</msg>
+<msg timestamp="20240315 11:59:47.333" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484186416.png'/&gt;
+[log] CLICK on L[134,477]@S(0) (563 msec)
+[log]  TYPE "S"</msg>
+<status status="PASS" starttime="20240315 11:59:46.160" endtime="20240315 11:59:47.334"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>ENTER</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240315 11:59:47.335" level="INFO">Pressing keys: Key.enter</msg>
+<status status="PASS" starttime="20240315 11:59:47.334" endtime="20240315 11:59:47.336"/>
+</kw>
+<kw name="Wheel Down" library="SikuliLibrary">
+<arg>7</arg>
+<doc>Wheel down
+ Move mouse to the target, and wheel down with give steps</doc>
+<status status="PASS" starttime="20240315 11:59:47.336" endtime="20240315 11:59:47.719"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${city}</arg>
+<doc>Click</doc>
+<msg timestamp="20240315 11:59:48.645" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484187931.png'/&gt;
+[log] CLICK on L[99,313]@S(0) (577 msec)</msg>
+<status status="PASS" starttime="20240315 11:59:47.719" endtime="20240315 11:59:48.645"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${city}</arg>
+<arg>${emp}[city]</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20240315 11:59:49.278" level="INFO">Input Text:
+NY</msg>
+<msg timestamp="20240315 11:59:49.278" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484188814.png'/&gt;
+[log] CLICK on L[99,313]@S(0) (62 msec)
+[log]  TYPE "NY"</msg>
+<status status="PASS" starttime="20240315 11:59:48.645" endtime="20240315 11:59:49.278"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>TAB</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240315 11:59:49.278" level="INFO">Pressing keys: Key.tab</msg>
+<status status="PASS" starttime="20240315 11:59:49.278" endtime="20240315 11:59:49.278"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${state}</arg>
+<doc>Click</doc>
+<msg timestamp="20240315 11:59:50.181" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484189466.png'/&gt;
+[log] CLICK on L[238,311]@S(0) (579 msec)</msg>
+<status status="PASS" starttime="20240315 11:59:49.278" endtime="20240315 11:59:50.181"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${state_search}</arg>
+<arg>${emp}[state]</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20240315 11:59:51.693" level="INFO">Input Text:
+AK</msg>
+<msg timestamp="20240315 11:59:51.693" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484190715.png'/&gt;
+[log] CLICK on L[238,339]@S(0) (558 msec)
+[log]  TYPE "AK"</msg>
+<status status="PASS" starttime="20240315 11:59:50.183" endtime="20240315 11:59:51.693"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>ENTER</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240315 11:59:51.693" level="INFO">Pressing keys: Key.enter</msg>
+<status status="PASS" starttime="20240315 11:59:51.693" endtime="20240315 11:59:51.693"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>TAB</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240315 11:59:51.693" level="INFO">Pressing keys: Key.tab</msg>
+<status status="PASS" starttime="20240315 11:59:51.693" endtime="20240315 11:59:51.800"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${zip}</arg>
+<arg>${emp}[zip]</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20240315 11:59:53.127" level="INFO">Input Text:
+10001</msg>
+<msg timestamp="20240315 11:59:53.127" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484191981.png'/&gt;
+[log] CLICK on L[375,298]@S(0) (561 msec)
+[log]  TYPE "10001"</msg>
+<status status="PASS" starttime="20240315 11:59:51.801" endtime="20240315 11:59:53.129"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>TAB</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240315 11:59:53.129" level="INFO">Pressing keys: Key.tab</msg>
+<status status="PASS" starttime="20240315 11:59:53.129" endtime="20240315 11:59:53.129"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${country}</arg>
+<doc>Click</doc>
+<msg timestamp="20240315 11:59:54.115" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484193363.png'/&gt;
+[log] CLICK on L[149,370]@S(0) (563 msec)</msg>
+<status status="PASS" starttime="20240315 11:59:53.129" endtime="20240315 11:59:54.116"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${country_search}</arg>
+<arg>${emp}[country]</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20240315 11:59:56.681" level="INFO">Input Text:
+United States</msg>
+<msg timestamp="20240315 11:59:56.681" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484194697.png'/&gt;
+[log] CLICK on L[151,408]@S(0) (566 msec)
+[log]  TYPE "United States"</msg>
+<status status="PASS" starttime="20240315 11:59:54.117" endtime="20240315 11:59:56.682"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>ENTER</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240315 11:59:56.682" level="INFO">Pressing keys: Key.enter</msg>
+<status status="PASS" starttime="20240315 11:59:56.682" endtime="20240315 11:59:56.682"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${save}</arg>
+<doc>Click</doc>
+<msg timestamp="20240315 11:59:57.594" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484196879.png'/&gt;
+[log] CLICK on L[70,676]@S(0) (563 msec)</msg>
+<status status="PASS" starttime="20240315 11:59:56.682" endtime="20240315 11:59:57.594"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240315 12:00:05.598" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20240315 11:59:57.594" endtime="20240315 12:00:05.598"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${screen_space}</arg>
+<doc>Click</doc>
+<msg timestamp="20240315 12:00:08.532" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484207796.png'/&gt;
+[log] CLICK on L[363,440]@S(0) (564 msec)</msg>
+<status status="PASS" starttime="20240315 12:00:05.599" endtime="20240315 12:00:08.533"/>
+</kw>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${screenshots}/${emp}[employee_id].png</arg>
+<doc>Add image path</doc>
+<msg timestamp="20240315 12:00:08.542" level="INFO">[error] ImagePath: add: folder does not exist (C:\Users\Surya\Documents\GitHub\Bamboo\Bamboo_HR\Screenshots\837888.png)
+[error] ImagePath: add: not valid: C:\Users\Surya\Documents\GitHub\Bamboo\Bamboo_HR\Screenshots/837888.png</msg>
+<status status="PASS" starttime="20240315 12:00:08.534" endtime="20240315 12:00:08.543"/>
+</kw>
+<kw name="Capture Screen" library="SikuliLibrary">
+<doc>Capture whole screen, file name is returned</doc>
+<msg timestamp="20240315 12:00:08.664" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1710484208597.png'/&gt;</msg>
+<status status="PASS" starttime="20240315 12:00:08.544" endtime="20240315 12:00:08.664"/>
+</kw>
+<status status="PASS" starttime="20240315 11:59:21.337" endtime="20240315 12:00:08.664"/>
+</kw>
+<status status="PASS" starttime="20240315 11:59:21.336" endtime="20240315 12:00:08.664"/>
+</iter>
+<status status="PASS" starttime="20240315 11:59:21.335" endtime="20240315 12:00:08.664"/>
+</for>
+<status status="PASS" starttime="20240315 11:59:21.305" endtime="20240315 12:00:08.664"/>
+</kw>
+<status status="PASS" starttime="20240315 11:59:00.047" endtime="20240315 12:00:08.664"/>
+</test>
+<status status="PASS" starttime="20240315 11:58:54.488" endtime="20240315 12:00:08.680"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Index">Index</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
