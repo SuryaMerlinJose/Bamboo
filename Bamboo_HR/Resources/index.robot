@@ -81,10 +81,10 @@ Add new employee
     SikuliLibrary.Click    ${IMGDIR}/${screen_space}
     # ${path}    ${screenshots}/${emp}[employee_id].png
     # SikuliLibrary.Add Image Path    ${screenshots}/${emp}[employee_id].png
-    # SikuliLibrary.Set Capture Folder    ${screenshots}/${emp}[employee_id].png
-    ${path}=    SikuliLibrary.Capture Screen   
-    Log    ${path} 
-
+    SikuliLibrary.Set Capture Folder    ${screenshots}/${emp}[employee_id].png
+    # ${path}=    SikuliLibrary.Capture Screen   
+    # Log    ${path} 
+    SikuliLibrary.Capture Screen 
     # Capture Page Screenshot    ${screenshots}/${emp}[employee_id].png    #Error: Cannot capture screenshot because no browser is open.
     # Take Screenshot
     
