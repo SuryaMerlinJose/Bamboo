@@ -5,6 +5,7 @@ Library     RPA.Browser.Selenium
 Variables   ../Variable/image.py
 
 Library     RPA.Excel.Files
+Library    OperatingSystem
 
 
 
@@ -23,18 +24,22 @@ open chrome from desktop
     # SikuliLibrary.Click    ${maximize}
     # Sleep    1
     Sleep    3   
+    SikuliLibrary.Wait Until Screen Contain    ${top_bar}    10
+    SikuliLibrary.Click    ${top_bar}
+    # SikuliLibrary.Exists    ${IMGDIR}/${maximize}
     ${is_exist}    SikuliLibrary.Exists    ${IMGDIR}/${maximize}
     
     IF     ${is_exist}==True
         Log    ${is_exist}
-        SikuliLibrary.Double Click    ${top_bar}
+        SikuliLibrary.Click    ${IMGDIR}/${maximize}
         # RPA.Desktop.Press Keys    Windows    Up 
     END
     SikuliLibrary.Input Text    ${IMGDIR}/${url_bar}    ${URL}
     RPA.Desktop.Press Keys    ENTER
 
 Logging into bamboo Bamboo_HR
-    Sleep    5
+    Sleep    8
+    SikuliLibrary.Wait Until Screen Contain    ${IMGDIR}/${email}    4
     SikuliLibrary.Input Text    ${IMGDIR}/${email}    suryamerlinjose@gmail.com
     RPA.Desktop.Press Keys    TAB
     SikuliLibrary.Input Text    ${IMGDIR}/${password}    Quad@123
@@ -43,8 +48,10 @@ Logging into bamboo Bamboo_HR
 Add new employee
     [Arguments]    ${emp}
     Sleep    5
+    SikuliLibrary.Wait Until Screen Contain    ${IMGDIR}/${people_button}    5
     SikuliLibrary.Click    ${IMGDIR}/${people_button}
     Sleep    5
+    SikuliLibrary.Wait Until Screen Contain    ${IMGDIR}/${add_new_employee}    5
     SikuliLibrary.Click    ${IMGDIR}/${add_new_employee}
     Sleep    3
     SikuliLibrary.Click    ${IMGDIR}/${emp_id}
@@ -78,13 +85,20 @@ Add new employee
     RPA.Desktop.Press Keys    ENTER
     SikuliLibrary.Click    ${IMGDIR}/${save}
     Sleep    8
+    SikuliLibrary.Wait Until Screen Contain    ${IMGDIR}/${screen_space}    5
     SikuliLibrary.Click    ${IMGDIR}/${screen_space}
+
+    #--------------Screenshots with custom name----------------------------------------
+    ${path}=    SikuliLibrary.Capture Screen   
+    Log    ${path}
+    OperatingSystem.Move File    ${path}     ${screenshots}/${emp}[employee_id].png
+
+
     # ${path}    ${screenshots}/${emp}[employee_id].png
     # SikuliLibrary.Add Image Path    ${screenshots}/${emp}[employee_id].png
-    SikuliLibrary.Set Capture Folder    ${screenshots}/${emp}[employee_id].png
-    # ${path}=    SikuliLibrary.Capture Screen   
-    # Log    ${path} 
-    SikuliLibrary.Capture Screen 
+    # SikuliLibrary.Set Capture Folder    ${screenshots}
+    # OperatingSystem.Move File    ${path}     ${screenshots}
+    # SikuliLibrary.Capture Screen     
     # Capture Page Screenshot    ${screenshots}/${emp}[employee_id].png    #Error: Cannot capture screenshot because no browser is open.
     # Take Screenshot
     

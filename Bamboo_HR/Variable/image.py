@@ -1,6 +1,6 @@
 
 chrome_icon="Chrome_icon.PNG"
-maximize="maximize.PNG"
+maximize="maxi.PNG"
 url_bar="url_bar.PNG"
 email="email.PNG"
 password="password.PNG"
